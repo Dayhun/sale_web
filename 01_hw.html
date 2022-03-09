@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <title>부트스트랩 연습하기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Jua', sans-serif;
+            font-family: 'Nanum Brush Script', cursive;
+        }
+
+        .product_image {
+            background-color: green;
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            background-image: url("https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_KR?wid=1280&hei=1190&fmt=jpeg&qlt=80&.v=1632948895000");
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .price {
+            font-size: 20px;
+        }
+
+        .order {
+            width: 100px;
+            margin: auto;
+            display: block;
+
+        }
+
+        .product {
+            width: 600px;
+            margin: auto;
+        }
+
+    </style>
+    <script>
+        function order_message() {
+            alert('주문이 완료되었습니다.');
+        }
+    </script>
+</head>
+
+<body>
+<div class="product">
+    <div class="product_image"></div>
+    <div class="product_detail">
+        <h1>MacBook Pro 중고 팝니다.
+            <span class="price">  가격 : 1,900,000 만원</span></h1>
+        <p> 구매한 지 한 달밖에 안된 제품입니다. 스크레치 없는 거의 새 상품입니다.</p>
+    </div>
+
+
+    <div class="item-order">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">주문자이름</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">수량</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>-- 수량을 선택하세요 --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">주소</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">전화번호</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+    </div>
+    <div class="order" onclick="order_message()">
+        <button>주문하기</button>
+    </div>
+</body>
+
+</html>
