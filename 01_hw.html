@@ -59,6 +59,22 @@
 
     </style>
     <script>
+        $(document).ready(function () {
+            get_rate();
+        });
+
+        function get_rate(){
+            $.ajax({
+                type: "GET",
+                url: "http://spartacodingclub.shop/sparta_api/rate",
+                data: {},
+                success: function (response) {
+                    let now_rate = response['rate'];
+                    $('#now-rate').text(now_rate);
+                }
+            })
+        }
+
         function order_message() {
             alert('주문이 완료되었습니다.');
         }
@@ -69,12 +85,10 @@
 <div class="product">
     <div class="product_image"></div>
     <div class="product_detail">
-        <h1>MacBook Pro 중고 팝니다.
-            <span class="price">  가격 : 1,900,000 만원</span></h1>
+        <h1>MacBook Pro 중고 팝니다.<span class="price">  가격 : 1,900,000 만원</span></h1>
         <p> 구매한 지 한 달밖에 안된 제품입니다. 스크레치 없는 거의 새 상품입니다.</p>
+         <p class="rate">달러-원 환율: <span id="now-rate"> </span></p>
     </div>
-
-
     <div class="item-order">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
